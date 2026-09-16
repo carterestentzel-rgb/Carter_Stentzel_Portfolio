@@ -138,6 +138,7 @@
         }
     </style>
 </head>
+    
 <body>
 
     <header>
@@ -268,7 +269,33 @@
 
     </div>
 
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Find every carousel on the page
+            const carousels = document.querySelectorAll('[data-carousel]');
+            
+            carousels.forEach(carousel => {
+                const container = carousel.querySelector('.carousel-container');
+                const slides = carousel.querySelectorAll('.carousel-slide');
+                
+                // If there's only 1 image/video, no need to scroll
+                if (slides.length <= 1) return; 
 
+                let currentIndex = 0;
+
+                // Auto-scroll every 3.5 seconds
+                setInterval(() => {
+                    currentIndex++;
+                    // Reset back to the first slide if we hit the end
+                    if (currentIndex >= slides.length) {
+                        currentIndex = 0;
+                    }
+                    // Move the container to the left by 100% per slide
+                    container.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }, 3500); 
+            });
+        });
+    </script>
 
 </body>
 </html>
