@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carter Stentzel | Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #0056b3;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-muted: #666666;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 10%;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: #d1d8e0;
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+
+        /* Project Box Styles */
+        .project-box {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 40px;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid #eaeaea;
+        }
+
+        .project-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Carousel Styles */
+        .project-image {
+            width: 40%;
+            background-color: #e2e8f0;
+            position: relative;
+            overflow: hidden; /* Hides the slides that are off-screen */
+            min-height: 250px;
+            border-right: 1px solid #eaeaea;
+        }
+
+        .carousel-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s ease-in-out; /* Smooth sliding animation */
+        }
+
+        .carousel-slide {
+            min-width: 100%; /* Forces each image/video to take up the full pane */
+            height: 100%;
+            object-fit: cover; /* Ensures images fill the box without squishing */
+            display: block;
+        }
+
+        /* Text Content Area */
+        .project-content {
+            width: 60%;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .project-content h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .project-content p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            text-decoration: none;
+            color: var(--accent-color);
+            font-weight: 600;
+            align-self: flex-start;
+        }
+
+        .project-link:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .project-box { flex-direction: column; }
+            .project-image, .project-content { width: 100%; }
+            .project-image { border-right: none; border-bottom: 1px solid #eaeaea; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Carter Stentzel</h1>
+        <p>Mechanical Engineering Student</p>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title"></h2>
+
+        <!-- Project Box 1 -->
+        <div class="project-box">
+            <div class="project-image" data-carousel>
+                <div class="carousel-container">
+                    <!-- Image 1 -->
+                    <img class="carousel-slide" src="https://via.placeholder.com/600x400/2c3e50/ffffff?text=Raw+Data+Plot" alt="Raw Data">
+                    
+                    <!-- Image 2 -->
+                    <img class="carousel-slide" src="https://via.placeholder.com/600x400/0056b3/ffffff?text=Interpolated+Spline" alt="Smoothed Data">
+                    
+                    <!-- Example of a silent auto-playing video -->
+                    <!-- 
+                    <video class="carousel-slide" autoplay muted loop playsinline>
+                        <source src="your-video-file.mp4" type="video/mp4">
+                    </video> 
+                    -->
+                </div>
+            </div>
+            <div class="project-content">
+                <h2>Bistable Magnetic Watchband</h2>
+                <p>I developed a watchband with capabilites to don and doff through a single wrist input. This device allows those with reduced fine motor skills, such as children, tremor patients, or amputees, to still have an accessible watchband. The design uses the interaction of magnetized rings with cam shapes to create a watchband stable in both the open and closed states. The process of designing this band took over a hundred iterations through the span of a year to get each detail just right for use in markets. This design won second place in the 2025 ASME Student Mechanism and Robotics Design Competition, and involved magnetic research currently published under the linked conference article</p>
+                <a href="https://asmedigitalcollection.asme.org/IMECE/proceedings-abstract/IMECE2025/89350/V004T07A046/1231052" class="project-link">Conference Paper →</a>
+            </div>
+        </div>
+
+        <!-- Project Box 2 -->
+        <div class="project-box">
+            <div class="project-image" data-carousel>
+                <div class="carousel-container">
+                    <!-- Image 1 -->
+                    <img class="carousel-slide" src="https://via.placeholder.com/600x400/2c3e50/ffffff?text=Raw+Data+Plot" alt="Raw Data">
+                    
+                    <!-- Image 2 -->
+                    <img class="carousel-slide" src="https://via.placeholder.com/600x400/0056b3/ffffff?text=Interpolated+Spline" alt="Smoothed Data">
+                    
+                    <!-- Example of a silent auto-playing video -->
+                    <!-- 
+                    <video class="carousel-slide" autoplay muted loop playsinline>
+                        <source src="your-video-file.mp4" type="video/mp4">
+                    </video> 
+                    -->
+                </div>
+            </div>
+            <div class="project-content">
+                <h2>Pressure Control Health Monitoring</h2>
+                <p>As a part of my work in the BIO-Microelectricalmechanical Systems Lab (BIO-MEMS), I helped develop an active control wristband which regulated pressure on the wrist, which we used to test the affects of wrist pressure on heart rate monitors. I designed and callibrated a custom PCB force sensing board, which was mounted on the wrist to meassure the center of pressure and act as a sensor for the active feedback loop used. I also participated in an IRB study measuring the effects of this pressure regulator, which resulted in the conference article found in this link.</p>
+                <a href="https://asmedigitalcollection.asme.org/IMECE/proceedings-abstract/IMECE2025/89350/V004T07A049/1231110" class="project-link">Conference Paper →</a>
+            </div>
+        </div>
+
+        <!-- Project Box 3 -->
+        <div class="project-box">
+            <div class="project-image" data-carousel>
+                <div class="carousel-container">
+                    <!-- Image 1 -->
+                    <img class="carousel-slide" src="https://via.placeholder.com/600x400/2c3e50/ffffff?text=Raw+Data+Plot" alt="Raw Data">
+                    
+                    <!-- Image 2 -->
+                    <img class="carousel-slide" src="https://via.placeholder.com/600x400/0056b3/ffffff?text=Interpolated+Spline" alt="Smoothed Data">
+                    
+                    <!-- Example of a silent auto-playing video -->
+                    <!-- 
+                    <video class="carousel-slide" autoplay muted loop playsinline>
+                        <source src="your-video-file.mp4" type="video/mp4">
+                    </video> 
+                    -->
+                </div>
+            </div>
+            <div class="project-content">
+                <h2>Gravity-Balanced Rolling Contact Joints</h2>
+                <p>I helped the development of Gravity-Balanced Rolling Contact Joints. These joints are capable of balancing on their matched surface, allowing for incredibly energy-efficient joints. I was involved in the testing and prototyping of different surfaces used in these joints, such as flexible beams or gear teeth.</p>
+            </div>
+        </div>
+
+<div class="project-box">
+            <div class="project-image" data-carousel>
+                <div class="carousel-container">
+                    <!-- Image 1 -->
+                    <img class="carousel-slide" src="https://via.placeholder.com/600x400/2c3e50/ffffff?text=Raw+Data+Plot" alt="Raw Data">
+                    
+                    <!-- Image 2 -->
+                    <img class="carousel-slide" src="https://via.placeholder.com/600x400/0056b3/ffffff?text=Interpolated+Spline" alt="Smoothed Data">
+                    
+                    <!-- Example of a silent auto-playing video -->
+                    <!-- 
+                    <video class="carousel-slide" autoplay muted loop playsinline>
+                        <source src="your-video-file.mp4" type="video/mp4">
+                    </video> 
+                    -->
+                </div>
+            </div>
+            <div class="project-content">
+                <h2>Shape Morphing Beams</h2>
+                <p>I took part in the prototyping and force verification of shape morphing beams. These beams are the result of mathematical modeling which is able to generate cross sectional areas for beams allowing them to match desired shapes when a force is applied. One application of this mechanism is to create a morphing airfoil as a simple actuator can change the beam shape from one curve towards another. The conference paper detailing both the modeling and prototyping was presented at the ASME IDETC-CIE 2026 conference, and is waiting to be published in those proceedings.</p>
+            </div>
+        </div>
+
+<div class="project-box">
+            <div class="project-image" data-carousel>
+                <div class="carousel-container">
+                    <!-- Image 1 -->
+                    <img class="carousel-slide" src="https://via.placeholder.com/600x400/2c3e50/ffffff?text=Raw+Data+Plot" alt="Raw Data">
+                    
+                    <!-- Image 2 -->
+                    <img class="carousel-slide" src="https://via.placeholder.com/600x400/0056b3/ffffff?text=Interpolated+Spline" alt="Smoothed Data">
+                    
+                    <!-- Example of a silent auto-playing video -->
+                    <!-- 
+                    <video class="carousel-slide" autoplay muted loop playsinline>
+                        <source src="your-video-file.mp4" type="video/mp4">
+                    </video> 
+                    -->
+                </div>
+            </div>
+            <div class="project-content">
+                <h2>RC Airplane Design</h2>
+                <p>I am a member of the BYU Aeronautics association, which focuses on the development of Unmanned Aircraft, such as quad-copters and fixed-wing drones. I am a current member of the aerostrucutres team, and assisted with the design and manufacturing of a high-capacity airplane capable of carrying 12 lb using a single 4-cell battery. I also was the first semester team coordinator and helped dozens of students create their first RC Airplane out of foamboard, teaching them valuable skills such as soldering and CAD software (both Onshape and SOLIDWORKS).</p>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+
+
+</body>
+</html>
