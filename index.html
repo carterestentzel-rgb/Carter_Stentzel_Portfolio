@@ -95,9 +95,10 @@
         }
 
         .carousel-slide {
-            min-width: 100%; /* Forces each image/video to take up the full pane */
+            flex: 0 0 100%; /* Forces items to never shrink and take exactly 100% width */
+            width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures images fill the box without squishing */
+            object-fit: cover; 
             display: block;
         }
 
